@@ -1,5 +1,4 @@
 # Quiz Site
-Amatullah Brown
 
 This application allows users to choose a quiz (only "Eat your way through the day to find out what kind of gardener you are" is implemented) from a dropdown menu. After completing the quiz, the results are displayed on the same page. Users can also choose to "log in". At this point, the login page simply uses Regex/JavaScript to validate the login information fits the specified parameters and displays an error message if it does not.
 
