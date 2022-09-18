@@ -1,9 +1,3 @@
-
-/*
- * TODO: issue with radio buttons (even when visible)
- * some are auto checked, messing with results
- */
-
 const button = document.querySelector('#submit-btn');
 button.addEventListener('click', () => {
     calculateResult();
