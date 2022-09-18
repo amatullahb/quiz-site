@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Quiz: Eat Your Way Through the Day</title>
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        #submit-btn {
+            width: 350px;
+        }
+    </style>
+
+</head>
+<!-- This quiz was heavily inspired by a Buzzfeed quiz -->
+<body>
+    <header>
+        <nav class="main-nav">
+        <div class="drop-nav">
+                <button class="btn" id="quiz-btn">take a quiz</button>
+                <div class="nav-content">
+                    <a href="./food-quiz.html">what kind of gardener are you?</a>
+                    <a href="./no-quiz-yet.html">which book should you read next?</a>
+                    <a href="#">shop at target and we'll tell you how much student debt you have</a>
+                </div>
+            </div>
+            <a href="./login.html"><button class="btn">login - save your results!</button></a>
+        </nav>
+    </header>
+    <section class="quiz">
+        <h1>Eat your way through the day to find out what kind of gardener you are</h1>
+        <form action="get" id="foodQuiz"> 
+            <h2 class="instruction" class="breakfast">choose your breakfast</h2>
+            <div class="options" id="breakfast">
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/waffles.jpeg" alt="waffles">
+                    </div>
+                    <input type="radio" name="breakfast" value="waffles" id="waffles">
+                    <label for="waffles">
+                        waffles
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/omelette.jpeg">
+                    </div>
+                    <input type="radio" name="breakfast" value="omelette" id="omelette">
+                    <label for="omelette">
+                        omelette
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/avo-toast.jpeg">
+                    </div>
+                    <input type="radio" name="breakfast" value="avo-toast" id="avo-toast">
+                    <label for="avo-toast">
+                        avocado toast
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/fruit.jpeg">
+                    </div>
+                    <input type="radio" name="breakfast" value="fruit" id="fruit">
+                    <label for="fruit">
+                        fruit
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/pancakes.jpeg">
+                    </div>
+                    <input type="radio" name="breakfast" value="pancakes" id="pancakes">
+                    <label for="pancakes">
+                        pancakes
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/coffee.jpeg">
+                    </div>
+                    <input type="radio" name="breakfast" value="coffee" id="coffee">
+                    <label for="coffee">
+                        I am a lunatic who does not appreciate breakfast food
+                    </label>
+                </div>
+            </div>
+
+            <h2 class="instruction" id="snack1">now pick a snack</h2>
+            <div class="options">
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/fries.webp" alt="fries">
+                    </div>
+                    <input type="radio" name="snack1" value="fries" id="fries">
+                    <label for="fries">
+                        fries
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/popcorn.webp">
+                    </div>
+                    <input type="radio" name="snack1" value="popcorn" id="popcorn">
+                    <label for="popcorn">
+                        popcorn
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/strawberries.jpeg">
+                    </div>
+                    <input type="radio" name="snack1" value="strawberries" id="strawberries">
+                    <label for="strawberries">
+                        strawberries
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/pastry.jpeg">
+                    </div>
+                    <input type="radio" name="snack1" value="pastry" id="pastry">
+                    <label for="pastry">
+                        the pastry you spent the morning baking
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/burger.webp">
+                    </div>
+                    <input type="radio" name="snack1" value="burger" id="burger">
+                    <label for="burger">
+                        burger
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/macaron.webp">
+                    </div>
+                    <input type="radio" name="snack1" value="macarons" id="macarons">
+                    <label for="macarons">
+                        macarons
+                    </label>
+                </div>
+            </div>
+
+            <h2 class="instruction" id="lunch">it's lunchtime already</h2>
+            <div class="options">
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/burger2.jpg" alt="burger">
+                    </div>
+                    <input type="radio" name="lunch" value="burger2" id="burger2">
+                    <label for="burger2"b>
+                        another burger
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/cake2.jpeg">
+                    </div>
+                    <input type="radio" name="lunch" value="cake" id="cake">
+                    <label for="cake">
+                        cake for lunch
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/salad.jpeg">
+                    </div>
+                    <input type="radio" name="lunch" value="salad" id="salad">
+                    <label for="salad">
+                        salad
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/pizza.jpeg">
+                    </div>
+                    <input type="radio" name="lunch" value="pizza" id="pizza">
+                    <label for="pizza">
+                        pizza
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/ramen.jpeg">
+                    </div>
+                    <input type="radio" name="lunch" value="ramen" id="ramen">
+                    <label for="ramen">
+                        ramen
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/balanced.jpeg">
+                    </div>
+                    <input type="radio" name="lunch" value="balanced" id="balanced">
+                    <label for="balanced">
+                        it doesn't matter, so long as it's balanced
+                    </label>
+                </div>
+            </div>
+                
+            <h2 class="instruction" id="snack2">i'm sure you've been working hard...time for another snack!</h2>
+            <div class="options">
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/veggies.jpeg" alt="veggies">
+                    </div>
+                    <input type="radio" name="snack2" value="veggies" id="veggies">
+                    <label for="veggies">
+                        fresh veggies. yum!
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/croissant.jpeg">
+                    </div>
+                    <input type="radio" name="snack2" value="croissant" id="croissant">
+                    <label for="croissant">
+                        croissant
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/grapes.webp">
+                    </div>
+                    <input type="radio" name="snack2" value="grapes" id="grapes">
+                    <label for="grapes">
+                        grapes
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/yogurt.webp">
+                    </div>
+                    <input type="radio" name="snack2" value="yogurt" id="yogurt">
+                    <label for="yogurt">
+                        yogurt
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/muffin.jpeg">
+                    </div>
+                    <input type="radio" name="snack2" value="muffin" id="muffin">
+                    <label for="muffin">
+                        blueberry muffin
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/cake.jpeg">
+                    </div>
+                    <input type="radio" name="snack2" value="cake2" id="cake2">
+                    <label for="cake2">
+                        more cake
+                    </label>
+                </div>
+            </div>
+            
+            <h2 class="instruction" id="dinner">at long last, what do you want for dinner?</h2>
+            <div class="options">
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/pasta.jpeg" alt="pasta">
+                    </div>
+                    <input type="radio" name="dinner" value="pasta" id="pasta">
+                    <label for="pasta">
+                        pasta
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/seafood.webp">
+                    </div>
+                    <input type="radio" name="dinner" value="seafood" id="seafood">
+                    <label>
+                        seafood
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/soup.jpeg">
+                    </div>
+                    <input type="radio" name="dinner" value="soup" id="soup">
+                    <label>
+                        soup
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/steak.jpeg">
+                    </div>
+                    <input type="radio" name="dinner" value="steak" id="steak">
+                    <label>
+                        steak
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/taco.jpeg">
+                    </div>
+                    <input type="radio" name="dinner" value="tacos" id="tacos">
+                    <label>
+                        tacos
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/curry.webp">
+                    </div>
+                    <input type="radio" name="dinner" value="curry" id="curry">
+                    <label>
+                        curry
+                    </label>
+                </div>
+            </div>
+            
+            <h2 class="instruction" id="dessert">the time is now! what dessert have you been dreaming about all day?</h2>
+            <div class="options">
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/creme brulee.jpeg" alt="burger">
+                    </div>
+                    <input type="radio" name="dessert" value="creme-brulee" id="creme-brulee">
+                    <label>
+                        crème brûlée
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/chia-pudding.jpeg">
+                    </div>
+                    <input type="radio" name="dessert" value="chia-pudding" id="chia-pudding">
+                    <label>
+                        chia pudding
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/pie.jpeg">
+                    </div>
+                    <input type="radio" name="dessert" value="pie" id="pie">
+                    <label>
+                        pie!
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/cheesecake.webp">
+                    </div>
+                    <input type="radio" name="dessert" value="cheesecake" id="cheesecake">
+                    <label>
+                        cheesecake
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/ice-cream.jpeg">
+                    </div>
+                    <input type="radio" name="dessert" value="ice-cream" id="ice-cream">
+                    <label>
+                        ice cream
+                    </label>
+                </div>
+                <div class="choice">
+                    <div class="img-container">
+                        <img src="../imgs/brownies.webp">
+                    </div>
+                    <input type="radio" name="dessert" value="brownies" id="brownies">
+                    <label>
+                        brownies
+                    </label>
+                </div>
+                
+            </div>
+            
+            <button form="food-quiz" value="submit" class="btn" id="submit-btn" style="margin-left:50%; margin-bottom:10px; margin-right:50%;">find out what kind of gardener you are!</button>
+        </form>
+    </section>
+    <section class="result hidden">
+        <h1 id="result-h1">results</h1>
+        <div id="result-img"></div>
+        <p id="result-p"></p>
+    </section>
+    <script src="../js/app.js"></script>
+</body>
+</html>

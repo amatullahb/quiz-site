@@ -1,0 +1,106 @@
+:root {
+    --white: #f3f4f5;
+    --black: #1c2023;
+    --dark-grey: #565e65;
+    --light-grey: #747c84;
+    --beige: #c7ae95;
+    --green-blue: #95c7ae;
+    --dark-green-blue: #87b59e;
+    --green: #aec795;
+    --purple: #ae95c7 ;
+    --dark-purple: #9e87b5 ;
+    --light-purple: #c1a8db ;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: linear-gradient(315deg, var(--green), var(--green-blue), #E0C3FC);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+}
+
+form {
+    margin:auto;
+}
+
+h2 {
+    font-family: Comfortaa;
+    text-align: center;
+}
+
+.container {
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 5px;
+    height: 400px;
+    width: 400px;
+    opacity: 80%;
+}
+
+.user-info {
+    margin-top: 3px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr .5fr;
+    grid-template-areas: 
+    "label input"
+    "error error"
+    ;
+    gap: 0;
+    padding: 0px 50px;
+}
+
+.user-info label {
+    grid-area: label;
+}
+
+.user-info input {
+    /* margin-right: 50%;
+    margin-left: 10px; */
+    grid-area: input;
+    border-radius: 5px;
+}
+
+#password {
+    color: var(--light-purple);
+}
+
+.bad input {
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+#error {
+    grid-area: error;
+    grid-column-start: 2;
+    color: red;
+    font-size: 9px;
+    height: 10px;
+}
+
+#submit-btn {
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 6px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+#submit-btn:hover {
+    background-color: var(--dark-purple);
+}
+
+#login-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
