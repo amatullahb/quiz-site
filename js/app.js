@@ -134,22 +134,24 @@ function displayResults (archetype) {
 const options = document.querySelectorAll('.options');
 for (let option of options) {
     option.addEventListener('click', () => {
-        let instruction = option.previousElementSibling;
-        // let optionStyles = window.getComputedStyle(option);
-        // let instructionStyles = window.getComputedStyle(instruction);
-        let height = option.offsetHeight + instruction.offsetHeight;
-        height+= 50 + 10; // optionStyles.marginBottom + instructionStyles.marginBottom
-        // height += optionStyles.marginTop + optionStyles.marginBottom + instructionStyles.marginTop) + instructionStyles.marginBottom;
+        // let instruction = option.previousElementSibling;
+        // // let optionStyles = window.getComputedStyle(option);
+        // // let instructionStyles = window.getComputedStyle(instruction);
+        // let height = option.offsetHeight + instruction.offsetHeight;
+        // height+= 50 + 10; // optionStyles.marginBottom + instructionStyles.marginBottom
+        // // height += optionStyles.marginTop + optionStyles.marginBottom + instructionStyles.marginTop) + instructionStyles.marginBottom;
 
-        let count = 1;
-        let scroll = setInterval(() => {
-            window.scrollBy(0, height/15);
-            count += height/15;
+        // let count = 1;
+        // let scroll = setInterval(() => {
+        //     window.scrollBy(0, height/15);
+        //     count += height/15;
             
-            if (count >= height) {
-                clearInterval(scroll);
-            }
-        }, 10);
+        //     if (count >= height) {
+        //         clearInterval(scroll);
+        //     }
+        // }, 10);
+        let nextInstruction = option.nextElementSibling;
+        nextInstruction.scrollIntoView({behavior:'smooth'});
     });
 }
 
@@ -166,6 +168,7 @@ prevResultBtn.addEventListener('click', () => {
     } else {
         let noResult = document.querySelector('#prev-result-p');
         noResult.classList.remove('hidden');
+        prevResultBtn.classList.add('hidden');
         noResult.textContent = "Sorry, it doesn't look like you have previous results to show";
     }
 });
