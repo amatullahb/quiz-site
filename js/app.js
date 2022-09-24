@@ -86,26 +86,18 @@ function calculateResult () {
         }
     });
 
-    console.log('selected: ', selected);
-
     for (let i = 0; i < selected.length; i++) {
         if (tech.props.includes(selected[i])) {
-            console.log('increasing tech.points')
             tech.points++;
         } else if (master.props.includes(selected[i])) {
-            console.log('increasing master.points')
             master.points++;
         } else if (enthusiastic.props.includes(selected[i])) {
-            console.log('increasing enthusiastic.points')
             enthusiastic.points++;
         } else if (pandemic.props.includes(selected[i])) {
-            console.log('increasing pandemic.points')
             pandemic.points++;
         } else if (attached.props.includes(selected[i])) {
-            console.log('increasing attached.points')
             attached.points++;
         } else if (spider.props.includes(selected[i])) {
-            console.log('increasing spider.points')
             spider.points++;
         } 
     }
@@ -125,8 +117,6 @@ function displayResults (archetype) {
     resultSec.classList.remove('hidden');
     resultSec.classList.add('show');
 
-    console.log('archetype: ', archetype);
-
     if (archetype.name == 'spider') {
         document.querySelector('#result-h1').innerText = `You're only a gardener in your dreams`;
     } else {
@@ -135,4 +125,27 @@ function displayResults (archetype) {
 
     document.querySelector('#result-p').innerText = archetype.description;
     document.querySelector('#result-img').innerHTML = `<img src="${archetype.img}" id="result-img">`;
+}
+
+// autoscroll after selecting option
+const options = document.querySelectorAll('.options');
+for (let option of options) {
+    option.addEventListener('click', () => {
+        let instruction = option.previousElementSibling;
+        // let optionStyles = window.getComputedStyle(option);
+        // let instructionStyles = window.getComputedStyle(instruction);
+        let height = option.offsetHeight + instruction.offsetHeight;
+        height+= 50 + 10; // optionStyles.marginBottom + instructionStyles.marginBottom
+        // height += optionStyles.marginTop + optionStyles.marginBottom + instructionStyles.marginTop) + instructionStyles.marginBottom;
+
+        let count = 1;
+        let scroll = setInterval(() => {
+            window.scrollBy(0, height/15);
+            count += height/15;
+            
+            if (count >= height) {
+                clearInterval(scroll);
+            }
+        }, 10);
+    });
 }
