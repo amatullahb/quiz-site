@@ -33,7 +33,6 @@ for (let i = 0; i < imgs.length; i++) {
 }
 
 function calculateResult () {
-    console.log('in calculateResult')
     const tech = {
         name: 'high-tech',
         props: ['waffles', 'macaron', 'ramen', 'cake2', 'steak', 'creme-brulee'],
@@ -104,7 +103,11 @@ function calculateResult () {
 
     let options = [tech, master, enthusiastic, pandemic, attached, spider];
     options.sort((a, b) => {return b.points-a.points});
-    console.log(options);
+    
+    // store results in local storage
+    localStorage.setItem('name', options[0].name);
+    localStorage.setItem('description', options[0].description);
+    localStorage.setItem('img', options[0].img);
 
     displayResults(options[0]);
 }
@@ -149,3 +152,20 @@ for (let option of options) {
         }, 10);
     });
 }
+
+// show prev results from local storage
+const prevResultBtn = document.querySelector('#prev-btn');
+prevResultBtn.addEventListener('click', () => {
+    let archetype = {};
+    archetype.name = localStorage.getItem('name');
+    archetype.description = localStorage.getItem('description');
+    archetype.img = localStorage.getItem('img');
+    
+    if (archetype.name != null && archetype.description != null && archetype.img != null) {
+        displayResults(archetype);
+    } else {
+        let noResult = document.querySelector('#prev-result-p');
+        noResult.classList.remove('hidden');
+        noResult.textContent = "Sorry, it doesn't look like you have previous results to show";
+    }
+});
